@@ -10,16 +10,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#1B2A4A;
-    --ink-soft:#2E3E5C;
-    --paper:#FBFAF7;
-    --paper-dim:#F2EFE7;
-    --brass:#B8935F;
-    --brass-deep:#96754A;
-    --slate:#5C6B7A;
-    --approve:#3D7A5C;
-    --approve-bg:#E8F1EC;
-    --line:#DFDACD;
+    --ink:#1F2E27;
+    --ink-soft:#2F433A;
+    --paper:#FAF8F3;
+    --paper-dim:#EFEAE0;
+    --brass:#C1673D;
+    --brass-deep:#9E4F2C;
+    --slate:#5B685F;
+    --approve:#2F6B52;
+    --approve-bg:#E4EFE8;
+    --line:#DDD5C4;
     --serif:'Source Serif 4', Georgia, serif;
     --sans:'Inter', -apple-system, sans-serif;
     --mono:'IBM Plex Mono', monospace;
@@ -104,7 +104,7 @@
     content:"";
     position:absolute; top:-120px; right:-160px;
     width:520px; height:520px; border-radius:50%;
-    background:radial-gradient(circle, rgba(184,147,95,0.14), transparent 70%);
+    background:radial-gradient(circle, rgba(193,103,61,0.14), transparent 70%);
     pointer-events:none;
     animation:float-blob 12s ease-in-out infinite;
   }
@@ -112,7 +112,7 @@
     content:"";
     position:absolute; bottom:-160px; left:-140px;
     width:400px; height:400px; border-radius:50%;
-    background:radial-gradient(circle, rgba(61,122,92,0.08), transparent 70%);
+    background:radial-gradient(circle, rgba(47,107,82,0.08), transparent 70%);
     pointer-events:none;
     animation:float-blob 15s ease-in-out infinite reverse;
   }
@@ -143,7 +143,7 @@
   }
   .hero h1 em{
     font-style:normal; color:var(--brass-deep);
-    background:linear-gradient(180deg, transparent 62%, rgba(184,147,95,0.28) 62%);
+    background:linear-gradient(180deg, transparent 62%, rgba(193,103,61,0.28) 62%);
   }
   .hero p.sub{
     margin-top:24px; font-size:1.15rem; color:var(--slate); max-width:560px; line-height:1.6;
@@ -155,7 +155,7 @@
     transition:background .2s, transform .2s, box-shadow .2s;
     display:inline-block;
   }
-  .btn-primary:hover{background:var(--ink-soft); transform:translateY(-2px); box-shadow:0 10px 20px -8px rgba(27,42,74,0.35);}
+  .btn-primary:hover{background:var(--ink-soft); transform:translateY(-2px); box-shadow:0 10px 20px -8px rgba(31,46,39,0.35);}
   .btn-primary:active{transform:translateY(0); box-shadow:none;}
   .btn-ghost{
     border:1.5px solid var(--ink); padding:11.5px 24px; border-radius:3px;
@@ -163,14 +163,14 @@
     transition:background .2s, transform .2s, box-shadow .2s;
     display:inline-block;
   }
-  .btn-ghost:hover{background:var(--ink); color:var(--paper); transform:translateY(-2px); box-shadow:0 10px 20px -8px rgba(27,42,74,0.25);}
+  .btn-ghost:hover{background:var(--ink); color:var(--paper); transform:translateY(-2px); box-shadow:0 10px 20px -8px rgba(31,46,39,0.25);}
   .btn-ghost:active{transform:translateY(0); box-shadow:none;}
 
   /* Stat strip — "case stamp" motif */
   .stat-strip{
     margin-top:64px; display:grid; grid-template-columns:repeat(3,1fr); gap:0;
     border:1px solid var(--line); border-radius:6px; overflow:hidden; background:var(--paper);
-    box-shadow:0 1px 3px rgba(27,42,74,0.04);
+    box-shadow:0 1px 3px rgba(31,46,39,0.04);
     transform-style:preserve-3d;
   }
   .stat{
@@ -181,7 +181,7 @@
   }
   .stat:hover{
     transform:translateY(-4px) rotateX(4deg);
-    box-shadow:0 14px 28px -10px rgba(27,42,74,0.18);
+    box-shadow:0 14px 28px -10px rgba(31,46,39,0.18);
     z-index:2;
   }
   .stat:last-child{border-right:none;}
@@ -224,7 +224,7 @@
   }
   .practice-card:hover{
     transform:translateX(4px);
-    box-shadow:0 8px 20px -10px rgba(27,42,74,0.15);
+    box-shadow:0 8px 20px -10px rgba(31,46,39,0.15);
     border-color:var(--brass);
   }
   .practice-card .title{font-weight:600; font-size:0.96rem; margin-bottom:4px;}
@@ -244,14 +244,14 @@
     transform-style:preserve-3d;
     will-change:transform;
   }
-  .highlight-card:hover{box-shadow:0 20px 40px -14px rgba(27,42,74,0.22);}
+  .highlight-card:hover{box-shadow:0 20px 40px -14px rgba(31,46,39,0.22);}
   .highlight-card::before{
     content:""; position:absolute; top:0; left:0; width:4px; height:100%; background:var(--brass);
     transform:translateZ(20px);
   }
   .highlight-card::after{
     content:""; position:absolute; inset:0; pointer-events:none; opacity:0;
-    background:radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(184,147,95,0.14), transparent 55%);
+    background:radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(193,103,61,0.14), transparent 55%);
     transition:opacity .3s;
   }
   .highlight-card:hover::after{opacity:1;}
@@ -271,7 +271,7 @@
   .highlight-tag{
     display:inline-block; margin-top:14px; font-family:var(--mono); font-size:0.68rem;
     letter-spacing:.08em; text-transform:uppercase; color:var(--brass-deep);
-    background:rgba(184,147,95,0.1); padding:4px 10px; border-radius:20px;
+    background:rgba(193,103,61,0.1); padding:4px 10px; border-radius:20px;
   }
   @media (max-width:800px){.highlight-grid{grid-template-columns:1fr;}}
 
@@ -328,7 +328,7 @@
   }
   #contact::before{
     content:""; position:absolute; bottom:-100px; left:-100px; width:340px; height:340px; border-radius:50%;
-    background:radial-gradient(circle, rgba(184,147,95,0.18), transparent 70%);
+    background:radial-gradient(circle, rgba(193,103,61,0.18), transparent 70%);
   }
   #contact h2{font-family:var(--serif); font-weight:600; font-size:clamp(1.7rem,3.4vw,2.4rem); margin-bottom:14px;}
   #contact p{color:#C9D3E4; max-width:480px; margin:0 auto 32px; font-size:1.02rem;}
@@ -392,7 +392,7 @@
       <p class="sub">HR &amp; Immigration Specialist with 5+ years managing H-1B, PERM, and Green Card cases end to end — built on a foundation of full-cycle HR operations, compliance, and vendor relationship management.</p>
       <div class="hero-actions">
         <a class="btn-primary" href="#highlights">Review key accomplishments</a>
-        <a class="btn-ghost" href="mailto:priyavem02@gmail.com">Email Priya</a>
+        <a class="btn-ghost" href="mailto:priyavem02@gmail.com">Email me</a>
       </div>
 
       <div class="stat-strip">
@@ -417,8 +417,8 @@
       <div>
           <span class="section-tag">Background</span>
           <h2 style="font-family:var(--serif); font-weight:600; font-size:clamp(1.7rem,3vw,2.3rem); letter-spacing:-0.01em; margin-bottom:20px;">A caseload that runs on precision, not just volume.</h2>
-          <p>Priya has spent the last five years at the intersection of immigration law and HR operations inside a high-volume IT staffing environment — where a single missed deadline or incomplete filing can cost a candidate their status. That pressure shaped how she works: methodical documentation, proactive client communication, and a caseload that never falls behind.</p>
-          <p>Her immigration work spans the full employment-based lifecycle — H-1B petitions (new, extension, and transfer), and PERM/Green Card processing from Prevailing Wage Determination through Labor Certification — all handled in close coordination with supervising attorneys. Alongside that, she's run the HR side of the business: onboarding, I-9/E-Verify compliance, benefits, employee relations, and vendor contracts, giving her a rare full-picture view of what a case means for the person behind it.</p>
+          <p>I've spent the last five years at the intersection of immigration law and HR operations inside a high-volume IT staffing environment — where a single missed deadline or incomplete filing can cost a candidate their status. That pressure shaped how I work: methodical documentation, proactive client communication, and a caseload that never falls behind.</p>
+          <p>My immigration work spans the full employment-based lifecycle — H-1B petitions (new, extension, and transfer), and PERM/Green Card processing from Prevailing Wage Determination through Labor Certification — all handled in close coordination with supervising attorneys. Alongside that, I've run the HR side of the business: onboarding, I-9/E-Verify compliance, benefits, employee relations, and vendor contracts, giving me a rare full-picture view of what a case means for the person behind it.</p>
         </div>
         <div class="practice-areas">
           <div class="practice-card">
@@ -446,7 +446,7 @@
       <div class="section-head reveal">
         <span class="section-tag">Track record</span>
         <h2>Key accomplishments</h2>
-        <p>Outcomes, not just responsibilities — the results her caseload and client relationships have produced.</p>
+        <p>Outcomes, not just responsibilities — the results my caseload and client relationships have produced.</p>
       </div>
       <div class="highlight-grid reveal-stagger">
 
@@ -476,7 +476,7 @@
             <div class="highlight-icon">＄</div>
           </div>
           <h3>New business generated through direct candidate placement</h3>
-          <p>Sourced and placed candidates as company W2 consultants on her own initiative — expanding client accounts and revenue beyond her core immigration and HR duties.</p>
+          <p>Sourced and placed candidates as company W2 consultants on my own initiative — expanding client accounts and revenue beyond my core immigration and HR duties.</p>
           <span class="highlight-tag">Business development</span>
         </div>
 
@@ -595,7 +595,7 @@
   </section>
 
   <section id="contact" class="reveal">
-    <h2>Let's talk about your caseload.</h2>
+    <h2>Let's talk about my caseload.</h2>
     <p>Currently exploring immigration paralegal opportunities. Open to relocation and on-site work.</p>
     <div class="contact-links">
       <a href="mailto:priyavem02@gmail.com">✉ priyavem02@gmail.com</a>
